@@ -1,0 +1,1470 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Qualifications | Yogprakash Yogshala</title>
+    <meta name="description" content="Explore the academic qualifications and yoga education of Master Omprakash Tiwari.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #071426;
+            --panel: #10243b;
+            --gold: #d8b574;
+            --gold-light: #ffe8a8;
+            --white: #f5f2eb;
+            --muted: #aab7c8;
+            --line: rgba(216, 181, 116, .25);
+            --serif: "Cormorant Garamond", Georgia, serif;
+            --sans: "DM Sans", Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--white);
+            font-family: var(--sans);
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font: inherit;
+        }
+
+        .q-page {
+            min-height: 100vh;
+            overflow: hidden;
+            background:
+                radial-gradient(ellipse at 85% 15%, #172e48 0%, transparent 35%),
+                var(--bg);
+        }
+
+        .q-container {
+            width: min(1120px, 88%);
+            margin: auto;
+        }
+
+        /* NAVIGATION */
+
+        .q-nav {
+            border-bottom: 1px solid var(--line);
+        }
+
+        .q-nav-inner {
+            display: flex;
+            min-height: 82px;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .q-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .q-brand img {
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        .q-brand strong {
+            display: block;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+        }
+
+        .q-brand span {
+            display: block;
+            margin-top: 5px;
+            color: var(--gold);
+            font-size: 9px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .q-back {
+            color: var(--gold);
+            font-size: 11px;
+            letter-spacing: .7px;
+            transition: color .3s ease;
+        }
+
+        .q-back:hover {
+            color: var(--white);
+        }
+
+        /* HERO */
+
+        .q-hero {
+            padding: 85px 0 60px;
+            text-align: center;
+            animation: qFadeUp .9s ease both;
+        }
+
+        .q-eyebrow {
+            color: var(--gold);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            line-height: 1.8;
+            text-transform: uppercase;
+        }
+
+        .q-hero h1 {
+            margin: 22px 0;
+            font-family: var(--serif);
+            font-size: clamp(52px, 8vw, 88px);
+            font-weight: 400;
+            line-height: .95;
+        }
+
+        .q-hero h1 em {
+            color: var(--gold);
+            font-weight: 400;
+        }
+
+        .q-hero p {
+            max-width: 580px;
+            margin: auto;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 2;
+        }
+
+        /* MAIN DEGREE */
+
+        .q-degree-section {
+            padding: 25px 0 100px;
+        }
+
+        .q-degree-layout {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .q-degree-copy {
+            animation: qFadeUp .9s .15s ease both;
+        }
+
+        .q-number {
+            color: var(--gold);
+            font-family: var(--serif);
+            font-size: 65px;
+            line-height: 1;
+        }
+
+        .q-degree-copy h2 {
+            margin: 20px 0;
+            font-family: var(--serif);
+            font-size: clamp(38px, 4.5vw, 55px);
+            font-weight: 500;
+            line-height: 1;
+        }
+
+        .q-degree-copy h2 em {
+            color: var(--gold);
+            font-weight: 400;
+        }
+
+        .q-degree-copy p {
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 2;
+        }
+
+        .q-degree-note {
+            margin-top: 25px;
+            padding-left: 16px;
+            border-left: 2px solid var(--gold);
+            color: var(--gold);
+            font-size: 11px;
+            line-height: 1.8;
+        }
+
+        /* DEGREE FRAME */
+
+        .q-degree-visual {
+            position: relative;
+            padding: 18px;
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, .018);
+            opacity: 0;
+            transform: translateY(25px);
+            animation: qFrameReveal .8s .2s ease forwards;
+            transition: box-shadow .5s ease, border-color .5s ease;
+        }
+
+        .q-degree-visual:hover {
+            border-color: rgba(216, 181, 116, .75);
+            box-shadow: 0 0 35px rgba(216, 181, 116, .12);
+        }
+
+        .q-degree-visual::before,
+        .q-degree-visual::after {
+            position: absolute;
+            z-index: 5;
+            width: 65px;
+            height: 65px;
+            content: "";
+            pointer-events: none;
+            animation: qCorners .8s 1s ease both;
+        }
+
+        .q-degree-visual::before {
+            top: -8px;
+            left: -8px;
+            border-top: 2px solid var(--gold);
+            border-left: 2px solid var(--gold);
+        }
+
+        .q-degree-visual::after {
+            right: -8px;
+            bottom: -8px;
+            border-right: 2px solid var(--gold);
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .q-degree-image-button {
+            position: relative;
+            display: block;
+            width: 100%;
+            padding: 0;
+            overflow: hidden;
+            border: 0;
+            background: #fff;
+            cursor: zoom-in;
+            perspective: 1000px;
+            isolation: isolate;
+        }
+
+        .q-degree-image-button > img {
+            position: relative;
+            z-index: 0;
+            display: block;
+            width: 100%;
+            height: auto;
+            max-height: 650px;
+            object-fit: contain;
+            opacity: 0;
+            transform: scale(.97);
+            animation: qFinalDegree .65s 1.85s ease forwards;
+        }
+
+        .q-degree-piece {
+            position: absolute;
+            z-index: 2;
+            width: 33.3334%;
+            height: 33.3334%;
+            background-image: url("assets/master of arts.jpeg");
+            background-repeat: no-repeat;
+            background-size: 300% 300%;
+            opacity: 0;
+            pointer-events: none;
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+            animation: qPieceJoin 1.35s var(--delay) cubic-bezier(.2, .8, .2, 1) forwards;
+        }
+
+        .q-degree-piece:nth-of-type(1) {
+            left: 0; top: 0;
+            background-position: 0 0;
+            --delay: .05s; --x: -100px; --y: -90px; --r: -28deg;
+        }
+
+        .q-degree-piece:nth-of-type(2) {
+            left: 33.3333%; top: 0;
+            background-position: 50% 0;
+            --delay: .15s; --x: 0; --y: -120px; --r: 25deg;
+        }
+
+        .q-degree-piece:nth-of-type(3) {
+            left: 66.6666%; top: 0;
+            background-position: 100% 0;
+            --delay: .08s; --x: 110px; --y: -80px; --r: 30deg;
+        }
+
+        .q-degree-piece:nth-of-type(4) {
+            left: 0; top: 33.3333%;
+            background-position: 0 50%;
+            --delay: .18s; --x: -130px; --y: 0; --r: -25deg;
+        }
+
+        .q-degree-piece:nth-of-type(5) {
+            left: 33.3333%; top: 33.3333%;
+            background-position: 50% 50%;
+            --delay: .25s; --x: 0; --y: 35px; --r: 180deg;
+        }
+
+        .q-degree-piece:nth-of-type(6) {
+            left: 66.6666%; top: 33.3333%;
+            background-position: 100% 50%;
+            --delay: .13s; --x: 125px; --y: 0; --r: 25deg;
+        }
+
+        .q-degree-piece:nth-of-type(7) {
+            left: 0; top: 66.6666%;
+            background-position: 0 100%;
+            --delay: .10s; --x: -100px; --y: 100px; --r: 25deg;
+        }
+
+        .q-degree-piece:nth-of-type(8) {
+            left: 33.3333%; top: 66.6666%;
+            background-position: 50% 100%;
+            --delay: .20s; --x: 0; --y: 120px; --r: -25deg;
+        }
+
+        .q-degree-piece:nth-of-type(9) {
+            left: 66.6666%; top: 66.6666%;
+            background-position: 100% 100%;
+            --delay: .06s; --x: 100px; --y: 90px; --r: -28deg;
+        }
+
+        .q-golden-light {
+            position: absolute;
+            z-index: 4;
+            top: -30%;
+            left: -120%;
+            width: 65%;
+            height: 160%;
+            background: linear-gradient(
+                105deg,
+                transparent,
+                rgba(255, 255, 255, .10) 35%,
+                rgba(216, 181, 116, .45) 50%,
+                rgba(255, 255, 255, .12) 60%,
+                transparent
+            );
+            transform: skewX(-20deg);
+            pointer-events: none;
+            animation: qGoldenSweep 1.2s 1.9s ease-in-out both;
+        }
+
+        .q-image-hint {
+            margin: 17px 0 0;
+            color: var(--muted);
+            font-size: 10px;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        /* ADDITIONAL CERTIFICATES */
+
+        .q-certificates {
+            position: relative;
+            padding: 85px 0 100px;
+            border-top: 1px solid var(--line);
+            background:
+                radial-gradient(ellipse at 50% 0%, rgba(216, 181, 116, .08), transparent 55%),
+                rgba(255, 255, 255, .012);
+        }
+
+        .q-certificates-intro {
+            max-width: 650px;
+            margin: 0 auto 48px;
+            text-align: center;
+        }
+
+        .q-certificates-intro h2 {
+            margin: 14px 0;
+            color: var(--white);
+            font-family: var(--serif);
+            font-size: clamp(38px, 5vw, 55px);
+            font-weight: 400;
+        }
+
+        .q-certificates-intro h2 em {
+            color: var(--gold);
+            font-weight: 400;
+        }
+
+        .q-certificates-intro p {
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 2;
+        }
+
+        .q-certificate-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .q-certificate-card {
+            position: relative;
+            min-width: 0;
+            padding: 17px;
+            overflow: hidden;
+            border: 1px solid rgba(216, 181, 116, .28);
+            border-radius: 4px;
+            background: linear-gradient(145deg, #142940, #091629 75%);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, .18);
+            opacity: 0;
+            animation: qCardReveal .9s var(--card-delay, 0s) cubic-bezier(.2, .8, .2, 1) forwards;
+            transition: border-color .4s ease, box-shadow .4s ease, transform .4s ease;
+        }
+
+        .q-certificate-card:nth-child(1) {
+            --card-delay: .15s;
+            --entry-x: -35px;
+            --entry-r: -3deg;
+        }
+
+        .q-certificate-card:nth-child(2) {
+            --card-delay: .35s;
+            --entry-x: 0;
+            --entry-r: 2deg;
+        }
+
+        .q-certificate-card:nth-child(3) {
+            --card-delay: .55s;
+            --entry-x: 35px;
+            --entry-r: 3deg;
+        }
+
+        .q-certificate-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--gold);
+            box-shadow: 0 20px 55px rgba(216, 181, 116, .13);
+        }
+
+        /* GOLD LAUREL DECORATIONS */
+
+        .q-laurel {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            min-height: 40px;
+            margin-bottom: 13px;
+            color: var(--gold);
+        }
+
+        .q-laurel-leaves {
+            display: inline-block;
+            font-family: Georgia, serif;
+            font-size: 38px;
+            line-height: 1;
+            text-shadow: 0 0 14px rgba(216, 181, 116, .25);
+            animation: qLeafGlow 3.5s ease-in-out infinite;
+        }
+
+        .q-laurel-leaves.left {
+            transform: rotate(-35deg) scaleX(-1);
+        }
+
+        .q-laurel-leaves.right {
+            transform: rotate(35deg);
+        }
+
+        .q-laurel-center {
+            color: var(--gold-light);
+            font-size: 9px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        /* CERTIFICATE IMAGE */
+
+        .q-certificate-image {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-height: 280px;
+            padding: 0;
+            overflow: hidden;
+            border: 1px solid rgba(216, 181, 116, .35);
+            background: #f7f3e9;
+            cursor: zoom-in;
+            isolation: isolate;
+        }
+
+        .q-certificate-image img {
+            display: block;
+            width: 100%;
+            height: 350px;
+            object-fit: contain;
+            transition: transform .65s ease, filter .65s ease;
+        }
+
+        .q-certificate-card:hover .q-certificate-image img {
+            transform: scale(1.025);
+            filter: contrast(1.025);
+        }
+
+        /* GOLD LIGHT SWEEP */
+
+        .q-certificate-shine {
+            position: absolute;
+            z-index: 2;
+            top: -20%;
+            left: -150%;
+            width: 75%;
+            height: 140%;
+            background: linear-gradient(
+                105deg,
+                transparent 15%,
+                rgba(255, 255, 255, .12) 38%,
+                rgba(255, 224, 151, .68) 50%,
+                rgba(255, 255, 255, .24) 57%,
+                transparent 75%
+            );
+            transform: skewX(-22deg);
+            pointer-events: none;
+            animation: qCertificateShine 1.4s var(--shine-delay, 1s) ease-in-out both;
+        }
+
+        .q-certificate-card:nth-child(2) .q-certificate-shine {
+            --shine-delay: 1.4s;
+        }
+
+        .q-certificate-card:nth-child(3) .q-certificate-shine {
+            --shine-delay: 1.8s;
+        }
+
+        .q-certificate-card:hover .q-certificate-shine {
+            animation: qCertificateShine .9s ease-in-out;
+        }
+
+        .q-certificate-info {
+            padding: 22px 5px 8px;
+            text-align: center;
+        }
+
+        .q-certificate-number {
+            display: block;
+            margin-bottom: 7px;
+            color: var(--gold);
+            font-family: var(--serif);
+            font-size: 18px;
+        }
+
+        .q-certificate-info h3 {
+            margin: 0 0 10px;
+            color: var(--white);
+            font-family: var(--serif);
+            font-size: 27px;
+            font-weight: 500;
+            line-height: 1.1;
+        }
+
+        .q-certificate-info p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 11px;
+            line-height: 1.9;
+        }
+
+        .q-certificate-tag {
+            display: inline-block;
+            margin-top: 17px;
+            padding: 7px 11px;
+            border: 1px solid rgba(216, 181, 116, .35);
+            color: var(--gold);
+            font-size: 9px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .q-certificate-hint {
+            margin-top: 35px;
+            color: var(--muted);
+            font-size: 10px;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        /* QUALIFICATION DETAILS */
+
+        .q-details {
+            padding: 65px 0;
+            border-top: 1px solid var(--line);
+            background: rgba(255, 255, 255, .018);
+        }
+
+        .q-details-heading {
+            margin: 0 0 35px;
+            font-family: var(--serif);
+            font-size: 42px;
+            font-weight: 400;
+        }
+
+        .q-details-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .q-detail {
+            padding: 25px 22px;
+            transition: background .35s ease;
+        }
+
+        .q-detail:hover {
+            background: rgba(216, 181, 116, .045);
+        }
+
+        .q-detail + .q-detail {
+            border-left: 1px solid var(--line);
+        }
+
+        .q-detail span {
+            display: block;
+            margin-bottom: 12px;
+            color: var(--gold);
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .q-detail h3 {
+            margin: 0 0 8px;
+            font-family: var(--serif);
+            font-size: 26px;
+            font-weight: 500;
+        }
+
+        .q-detail p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 11px;
+            line-height: 1.8;
+        }
+
+        /* FOOTER */
+
+        .q-footer {
+            padding: 28px 0;
+        }
+
+        .q-footer-inner {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            color: var(--muted);
+            font-size: 10px;
+        }
+
+        .q-footer a {
+            color: var(--gold);
+        }
+
+        /* IMAGE LIGHTBOX */
+
+        .q-lightbox {
+            position: fixed;
+            z-index: 1000;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            background: rgba(1, 7, 15, .95);
+            backdrop-filter: blur(8px);
+        }
+
+        .q-lightbox.is-open {
+            display: flex;
+            animation: qLightboxIn .3s ease forwards;
+        }
+
+        .q-lightbox img {
+            display: block;
+            max-width: 95%;
+            max-height: 88vh;
+            object-fit: contain;
+            background: white;
+            box-shadow: 0 20px 80px rgba(0, 0, 0, .45);
+            animation: qLightboxImageIn .4s ease both;
+        }
+
+        .q-lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            width: 45px;
+            height: 45px;
+            border: 1px solid var(--line);
+            background: var(--bg);
+            color: var(--gold);
+            font-size: 25px;
+            cursor: pointer;
+            transition: background .3s ease, color .3s ease;
+        }
+
+        .q-lightbox-close:hover {
+            background: var(--gold);
+            color: var(--bg);
+        }
+
+        /* ANIMATIONS */
+
+        @keyframes qFadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes qFrameReveal {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes qCorners {
+            from {
+                opacity: 0;
+                transform: scale(.2);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes qPieceJoin {
+            0% {
+                opacity: 0;
+                transform:
+                    translate3d(var(--x), var(--y), 150px)
+                    rotate(var(--r))
+                    rotateY(60deg)
+                    scale(.65);
+                filter: brightness(1.8);
+            }
+            20% {
+                opacity: 1;
+            }
+            75% {
+                opacity: 1;
+                transform: translate3d(0, 0, 0) rotate(0) rotateY(0) scale(1);
+                filter: brightness(1.15);
+            }
+            100% {
+                opacity: 0;
+                transform: translate3d(0, 0, 0) scale(1);
+                filter: brightness(1);
+            }
+        }
+
+        @keyframes qFinalDegree {
+            from {
+                opacity: 0;
+                transform: scale(.97);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes qGoldenSweep {
+            0% {
+                left: -120%;
+                opacity: 0;
+            }
+            15% {
+                opacity: 1;
+            }
+            100% {
+                left: 160%;
+                opacity: 0;
+            }
+        }
+
+        @keyframes qCardReveal {
+            from {
+                opacity: 0;
+                transform: translate3d(var(--entry-x), 35px, 0) rotate(var(--entry-r));
+                filter: blur(5px);
+            }
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0) rotate(0);
+                filter: blur(0);
+            }
+        }
+
+        @keyframes qCertificateShine {
+            0% {
+                left: -150%;
+                opacity: 0;
+            }
+            15% {
+                opacity: 1;
+            }
+            100% {
+                left: 160%;
+                opacity: 0;
+            }
+        }
+
+        @keyframes qLeafGlow {
+            0%, 100% {
+                color: #b9904e;
+                text-shadow: 0 0 7px rgba(216, 181, 116, .12);
+            }
+            50% {
+                color: var(--gold-light);
+                text-shadow: 0 0 17px rgba(255, 218, 139, .48);
+            }
+        }
+
+        @keyframes qLightboxIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes qLightboxImageIn {
+            from {
+                opacity: 0;
+                transform: scale(.94);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 850px) {
+            .q-certificate-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .q-certificate-card:nth-child(3) {
+                grid-column: 1 / -1;
+                width: min(100%, 440px);
+                justify-self: center;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .q-hero {
+                padding-top: 65px;
+            }
+
+            .q-degree-layout {
+                grid-template-columns: 1fr;
+                gap: 38px;
+            }
+
+            .q-degree-copy {
+                max-width: 550px;
+            }
+
+            .q-degree-visual {
+                padding: 12px;
+            }
+
+            .q-degree-visual::before,
+            .q-degree-visual::after {
+                width: 45px;
+                height: 45px;
+            }
+
+            .q-details-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .q-detail {
+                padding: 22px 5px;
+            }
+
+            .q-detail + .q-detail {
+                border-top: 1px solid var(--line);
+                border-left: 0;
+            }
+
+            .q-lightbox {
+                padding: 15px;
+            }
+
+            .q-lightbox-close {
+                top: 12px;
+                right: 12px;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .q-certificate-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .q-certificate-card:nth-child(3) {
+                grid-column: auto;
+                width: 100%;
+            }
+
+            .q-certificate-image img {
+                height: auto;
+                max-height: 480px;
+            }
+
+            .q-certificate-image {
+                min-height: 200px;
+            }
+
+            .q-brand strong {
+                font-size: 9px;
+            }
+
+            .q-back {
+                font-size: 9px;
+            }
+        }
+
+        /* ACCESSIBILITY */
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: .01ms !important;
+                animation-delay: 0ms !important;
+                transition-duration: .01ms !important;
+                scroll-behavior: auto !important;
+            }
+
+            .q-degree-piece,
+            .q-golden-light,
+            .q-certificate-shine {
+                display: none;
+            }
+
+            .q-degree-visual,
+            .q-degree-image-button > img,
+            .q-certificate-card {
+                opacity: 1;
+                transform: none;
+                filter: none;
+            }
+        }
+        
+/* CINEMATIC CERTIFICATE ENTRANCE */
+
+.q-certificate-card {
+    opacity: 1;
+    animation: none;
+    transform-style: preserve-3d;
+}
+
+/* Animation tab chalegi jab certificate screen par aaye */
+.q-certificate-card.q-reveal {
+    opacity: 0;
+}
+
+.q-certificate-card.q-reveal.q-show:nth-child(1) {
+    animation: qSlideFlipLeft 1.35s cubic-bezier(.16, 1, .3, 1) both;
+}
+
+.q-certificate-card.q-reveal.q-show:nth-child(2) {
+    animation: qDropSpin 1.5s cubic-bezier(.16, 1, .3, 1) both;
+}
+
+.q-certificate-card.q-reveal.q-show:nth-child(3) {
+    animation: qSlideFlipRight 1.35s cubic-bezier(.16, 1, .3, 1) both;
+}
+
+/* First: left se slide + 3D rotation */
+@keyframes qSlideFlipLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-180px) rotateY(75deg) rotate(-8deg) scale(.7);
+        filter: blur(8px);
+    }
+    65% {
+        opacity: 1;
+        transform: translateX(12px) rotateY(-8deg) rotate(2deg) scale(1.03);
+        filter: blur(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotateY(0) rotate(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+/* Second: upside-down entry + spin */
+@keyframes qDropSpin {
+    0% {
+        opacity: 0;
+        transform: translateY(-150px) rotateX(75deg) rotate(180deg) scale(.65);
+        filter: blur(8px);
+    }
+    65% {
+        opacity: 1;
+        transform: translateY(12px) rotateX(-8deg) rotate(-8deg) scale(1.04);
+        filter: blur(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotateX(0) rotate(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+/* Third: right se slide + 3D rotation */
+@keyframes qSlideFlipRight {
+    0% {
+        opacity: 0;
+        transform: translateX(180px) rotateY(-75deg) rotate(8deg) scale(.7);
+        filter: blur(8px);
+    }
+    65% {
+        opacity: 1;
+        transform: translateX(-12px) rotateY(8deg) rotate(-2deg) scale(1.03);
+        filter: blur(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotateY(0) rotate(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+/* Motion preference ka respect */
+@media (prefers-reduced-motion: reduce) {
+    .q-certificate-card.q-reveal,
+    .q-certificate-card.q-reveal.q-show:nth-child(n) {
+        opacity: 1;
+        animation: none;
+        transform: none;
+        filter: none;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+<div class="q-page">
+
+    <header class="q-nav">
+        <div class="q-container q-nav-inner">
+            <a href="index.html" class="q-brand">
+                <img src="assets/logo.jpeg" alt="Yogprakash Yogshala logo">
+                <div>
+                    <strong>YOGPRAKASH</strong>
+                    <span>Yogshala</span>
+                </div>
+            </a>
+
+            <a class="q-back" href="about.html">← BACK TO ABOUT</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section class="q-hero">
+            <div class="q-container">
+                <div class="q-eyebrow">Education & Professional Learning</div>
+
+                <h1>
+                    A foundation of<br>
+                    <em>knowledge.</em>
+                </h1>
+
+                <p>
+                    Discover the academic qualifications and professional
+                    training behind the journey of Master Omprakash Tiwari
+                    and his commitment to the study and practice of yoga.
+                </p>
+            </div>
+        </section>
+
+        <!-- MAIN DEGREE -->
+        <section class="q-degree-section">
+            <div class="q-container q-degree-layout">
+
+                <div class="q-degree-copy">
+                    <div class="q-number">01</div>
+
+                    <div class="q-eyebrow">Academic Qualification</div>
+
+                    <h2>
+                        Master of Arts<br>
+                        in <em>Yoga.</em>
+                    </h2>
+
+                    <p>
+                        Master Omprakash Tiwari holds a Master of Arts in
+                        Yoga and Science of Living from Jain Vishva Bharati
+                        Institute, Ladnun, Rajasthan.
+                    </p>
+
+                    <p>
+                        This qualification is part of his educational
+                        journey and his continuing engagement with yoga
+                        as a field of study and practice.
+                    </p>
+
+                    <div class="q-degree-note">
+                        M.A. in Yoga and Science of Living<br>
+                        Jain Vishva Bharati Institute
+                    </div>
+                </div>
+
+                <div class="q-degree-visual">
+                    <button
+                        type="button"
+                        class="q-degree-image-button"
+                        data-document="assets/master of arts.jpeg"
+                        data-alt="Master of Arts in Yoga and Science of Living degree"
+                        aria-label="View degree image larger"
+                    >
+                        <img
+                            src="assets/master of arts.jpeg"
+                            alt="Master of Arts in Yoga and Science of Living degree of Master Omprakash Tiwari"
+                        >
+
+                        <span class="q-degree-piece" aria-hidden="true"></span>
+                        <span class="q-degree-piece" aria-hidden="true"></span>
+                        <span class="q-degree-piece" aria-hidden="true"></span>
+
+                        <span class="q-degree-piece" aria-hidden="true"></span>
+                        <span class="q-degree-piece" aria-hidden="true"></span>
+                        <span class="q-degree-piece" aria-hidden="true"></span>
+
+                        <span class="q-degree-piece" aria-hidden="true"></span>
+                        <span class="q-degree-piece" aria-hidden="true"></span>
+                        <span class="q-degree-piece" aria-hidden="true"></span>
+
+                        <span class="q-golden-light" aria-hidden="true"></span>
+                    </button>
+
+                    <p class="q-image-hint">
+                        CLICK THE DOCUMENT TO VIEW IT LARGER ↗
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ADDITIONAL CERTIFICATES -->
+        <section class="q-certificates" id="professional-certificates">
+            <div class="q-container">
+
+                <div class="q-certificates-intro">
+                    <div class="q-eyebrow">Professional Training</div>
+
+                    <h2>
+                        A journey of<br>
+                        <em>continuous learning.</em>
+                    </h2>
+
+                    <p>
+                        Alongside his academic degree, these certificates
+                        represent additional training completed by
+                        Master Omprakash Tiwari.
+                    </p>
+                </div>
+
+                <div class="q-certificate-grid">
+
+                    <!-- CERTIFICATE 1 -->
+                    <article class="q-certificate-card">
+                        <div class="q-laurel" aria-hidden="true">
+                            <span class="q-laurel-leaves left">❧</span>
+                            <span class="q-laurel-center">Certificate</span>
+                            <span class="q-laurel-leaves right">❧</span>
+                        </div>
+
+                        <button
+                            type="button"
+                            class="q-certificate-image"
+                            data-document="assets/Acupressure Therapy.jpeg"
+                            data-alt="Diploma in Acupressure Therapy certificate"
+                            aria-label="View Acupressure Therapy certificate larger"
+                        >
+                            <img
+                                src="assets/Acupressure Therapy.jpeg"
+                                alt="Diploma in Acupressure Therapy certificate"
+                                loading="lazy"
+                            >
+                            <span class="q-certificate-shine" aria-hidden="true"></span>
+                        </button>
+
+                        <div class="q-certificate-info">
+                            <span class="q-certificate-number">02</span>
+                            <h3>Diploma in<br>Acupressure Therapy</h3>
+                            <p>
+                                International Institute of Natural Therapy<br>
+                                Mumbai · 2004
+                            </p>
+                            <span class="q-certificate-tag">Professional Training</span>
+                        </div>
+                    </article>
+
+                    <!-- CERTIFICATE 2 -->
+                    <article class="q-certificate-card">
+                        <div class="q-laurel" aria-hidden="true">
+                            <span class="q-laurel-leaves left">❧</span>
+                            <span class="q-laurel-center">Certificate</span>
+                            <span class="q-laurel-leaves right">❧</span>
+                        </div>
+
+                        <button
+                            type="button"
+                            class="q-certificate-image"
+                            data-document="assets/Naturopathy.jpeg"
+                            data-alt="Diploma in Naturopathy certificate"
+                            aria-label="View Naturopathy certificate larger"
+                        >
+                            <img
+                                src="assets/Naturopathy.jpeg"
+                                alt="Diploma in Naturopathy certificate"
+                                loading="lazy"
+                            >
+                            <span class="q-certificate-shine" aria-hidden="true"></span>
+                        </button>
+
+                        <div class="q-certificate-info">
+                            <span class="q-certificate-number">03</span>
+                            <h3>Diploma in<br>Naturopathy</h3>
+                            <p>
+                                International Institute of Natural Therapy<br>
+                                Mumbai · 2003
+                            </p>
+                            <span class="q-certificate-tag">Professional Training</span>
+                        </div>
+                    </article>
+
+                    <!-- CERTIFICATE 3 -->
+                    <article class="q-certificate-card">
+                        <div class="q-laurel" aria-hidden="true">
+                            <span class="q-laurel-leaves left">❧</span>
+                            <span class="q-laurel-center">Certificate</span>
+                            <span class="q-laurel-leaves right">❧</span>
+                        </div>
+
+                        <button
+                            type="button"
+                            class="q-certificate-image"
+                            data-document="assets/Teacher course.jpeg"
+                            data-alt="Comprehensive Yoga Teachers Training Course certificate from The Yoga Institute"
+                            aria-label="View Teacher Course certificate larger"
+                        >
+                            <img
+                                src="assets/Teacher course.jpeg"
+                                alt="Comprehensive Yoga Teachers Training Course certificate, 2001"
+                                loading="lazy"
+                            >
+                            <span class="q-certificate-shine" aria-hidden="true"></span>
+                        </button>
+
+                        <div class="q-certificate-info">
+                            <span class="q-certificate-number">04</span>
+                            <h3>Comprehensive Yoga<br>Teachers Training Course</h3>
+                            <p>
+                                The Yoga Institute<br>
+                                Santacruz, Mumbai · 2001
+                            </p>
+                            <span class="q-certificate-tag">900 Hours of Training</span>
+                        </div>
+                    </article>
+
+                </div>
+
+                <p class="q-certificate-hint">
+                    SELECT ANY CERTIFICATE TO VIEW THE DOCUMENT IN DETAIL ↗
+                </p>
+
+            </div>
+        </section>
+
+        <!-- QUALIFICATION DETAILS -->
+        <section class="q-details">
+            <div class="q-container">
+                <div class="q-eyebrow">A closer look</div>
+
+                <h2 class="q-details-heading">
+                    Qualification details
+                </h2>
+
+                <div class="q-details-grid">
+
+                    <article class="q-detail">
+                        <span>Qualification</span>
+                        <h3>Master of Arts</h3>
+                        <p>Postgraduate academic degree.</p>
+                    </article>
+
+                    <article class="q-detail">
+                        <span>Field of Study</span>
+                        <h3>Yoga & Science of Living</h3>
+                        <p>As stated on the degree document.</p>
+                    </article>
+
+                    <article class="q-detail">
+                        <span>Institution</span>
+                        <h3>Jain Vishva Bharati Institute</h3>
+                        <p>Ladnun, Rajasthan, India.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="q-footer">
+        <div class="q-container q-footer-inner">
+            <span>© <span id="q-year">2026</span> Yogprakash Yogshala</span>
+            <a href="about.html">← Return to About Page</a>
+        </div>
+    </footer>
+
+    <!-- SHARED DOCUMENT LIGHTBOX -->
+    <div
+        class="q-lightbox"
+        id="q-lightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Enlarged certificate or degree"
+        aria-hidden="true"
+    >
+        <button
+            type="button"
+            class="q-lightbox-close"
+            id="q-close-document"
+            aria-label="Close enlarged document"
+        >×</button>
+
+        <img id="q-lightbox-image" src="" alt="Enlarged document">
+    </div>
+
+</div>
+
+<script>
+    const qLightbox = document.getElementById("q-lightbox");
+    const qLightboxImage = document.getElementById("q-lightbox-image");
+    const qCloseButton = document.getElementById("q-close-document");
+    let qLastTrigger = null;
+
+    function qOpenDocument(button) {
+        const imagePath = button.dataset.document;
+        const imageAlt = button.dataset.alt || "Enlarged document";
+
+        qLastTrigger = button;
+        qLightboxImage.src = imagePath;
+        qLightboxImage.alt = imageAlt;
+
+        qLightbox.classList.add("is-open");
+        qLightbox.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+        qCloseButton.focus();
+    }
+
+    function qCloseDocument() {
+        qLightbox.classList.remove("is-open");
+        qLightbox.setAttribute("aria-hidden", "true");
+        qLightboxImage.src = "";
+        document.body.style.overflow = "";
+
+        if (qLastTrigger) {
+            qLastTrigger.focus();
+        }
+    }
+
+    document.querySelectorAll("[data-document]").forEach(function (button) {
+        button.addEventListener("click", function () {
+            qOpenDocument(button);
+        });
+    });
+
+    qCloseButton.addEventListener("click", qCloseDocument);
+
+    qLightbox.addEventListener("click", function (event) {
+        if (event.target === qLightbox) {
+            qCloseDocument();
+        }
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (
+            event.key === "Escape" &&
+            qLightbox.classList.contains("is-open")
+        ) {
+            qCloseDocument();
+        }
+    });
+
+    document.getElementById("q-year").textContent =
+        new Date().getFullYear();
+        
+/* Replay certificate animations when they enter the screen */
+
+const qCertificateCards = document.querySelectorAll(
+    ".q-certificate-card"
+);
+
+qCertificateCards.forEach(function (card) {
+    card.classList.add("q-reveal");
+});
+
+const qCertificateObserver = new IntersectionObserver(
+    function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                const card = entry.target;
+
+                // Restart animation each time the card enters view
+                card.classList.remove("q-show");
+                void card.offsetWidth;
+                card.classList.add("q-show");
+            } else {
+                entry.target.classList.remove("q-show");
+            }
+        });
+    },
+    {
+        threshold: 0.2
+    }
+);
+
+qCertificateCards.forEach(function (card) {
+    qCertificateObserver.observe(card);
+});
+
+</script>
+</body>
+</html>

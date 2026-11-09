@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | Yogprakash Yogshala</title>
+    <meta name="description" content="Contact Yogprakash Yogshala to enquire about live online yoga classes, programs and personal guidance.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+   <!-- NAVBAR -->
+<header class="navbar">
+    <div class="nav-container">
+
+       <a href="index.html" class="logo">
+    <img src="assets/logo.jpeg" >
+    <span>Yogprakash Yogshala</span>
+</a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="programs.html">Programs</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+
+        <button class="menu-toggle" aria-label="Open menu">
+            ☰
+        </button>
+
+    </div>
+</header>
+
+<main>
+
+    <!-- CONTACT HERO -->
+    <section class="page-hero contact-hero">
+        <div class="container hero-content reveal">
+
+            <p class="eyebrow">WE WOULD LOVE TO HEAR FROM YOU</p>
+
+            <h1>
+                Let's Begin Your
+                <span>Yoga Journey.</span>
+            </h1>
+
+            <p class="hero-description">
+                Have questions about our online yoga programs?
+                Connect with us and take the first step towards
+                a more mindful practice.
+            </p>
+
+            <a href="#contact-details" class="btn btn-primary">
+                Get in Touch
+            </a>
+
+        </div>
+    </section>
+
+    <!-- CONTACT DETAILS -->
+    <section class="section contact-section" id="contact-details">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+                <p class="eyebrow">CONNECT WITH US</p>
+
+                <h2>
+                    We're Here to
+                    <span>Help You.</span>
+                </h2>
+
+                <p>
+                    Contact us to learn more about classes, programs
+                    and personal yoga guidance.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+
+                <article class="contact-card reveal">
+                    <div class="contact-icon" aria-hidden="true">☎</div>
+                    <h3>Call Us</h3>
+                    <p>Speak with us about your yoga class enquiries.</p>
+
+                    <a href="tel:+919892064706" class="contact-detail">
+                        +91 98920 64706
+                    </a>
+
+                    <a href="tel:+919892064706" class="contact-action">
+                        Call Now →
+                    </a>
+                </article>
+
+                <article class="contact-card reveal">
+                    <div class="contact-icon" aria-hidden="true">✆</div>
+                    <h3>WhatsApp</h3>
+                    <p>Message us to ask about programs and online classes.</p>
+
+                    <a href="https://wa.me/919892064706"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="contact-detail">
+                        Chat With Us
+                    </a>
+
+                    <a href="https://wa.me/919892064706?text=Hello%20Yogprakash%20Yogshala%2C%20I%20would%20like%20to%20know%20about%20your%20yoga%20classes."
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="contact-action">
+                        Start a Conversation →
+                    </a>
+                </article>
+
+                <article class="contact-card reveal">
+                    <div class="contact-icon" aria-hidden="true">✉</div>
+                    <h3>Email Us</h3>
+                    <p>Send us your questions or class-related enquiries.</p>
+
+                    <a href="mailto:yogprakash29@gmail.com"
+                       class="contact-detail">
+                        yogprakash29@gmail.com
+                    </a>
+
+                    <a href="mailto:yogprakash29@gmail.com"
+                       class="contact-action">
+                        Send an Email →
+                    </a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ENQUIRY FORM -->
+    <section class="section enquiry-section">
+        <div class="container">
+
+            <div class="enquiry-layout">
+
+                <div class="enquiry-info reveal">
+                    <p class="eyebrow">PERSONAL GUIDANCE</p>
+
+                    <h2>
+                        Tell Us About
+                        <span>Your Interests.</span>
+                    </h2>
+
+                    <p>
+                        Interested in Hatha Yoga, Pranayama, Meditation,
+                        Advanced Asanas or personal classes?
+                    </p>
+
+                    <p>
+                        Fill in the enquiry form. It will prepare a message
+                        for you to review and send through WhatsApp.
+                    </p>
+
+                    <div class="teacher-note">
+                        <h3>Practice From Anywhere</h3>
+                        <p>
+                            Our classes are live online. Contact us to
+                            discuss suitable programs and availability.
+                        </p>
+                    </div>
+                </div>
+
+                <form class="enquiry-form reveal" id="enquiryForm">
+
+                    <div class="form-group">
+                        <label for="fullName">Your Name</label>
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Enter your name"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emailAddress">Email Address</label>
+                        <input
+                            type="email"
+                            id="emailAddress"
+                            name="emailAddress"
+                            placeholder="Enter your email"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="program">Program of Interest</label>
+
+                        <select id="program" name="program" required>
+                            <option value="">Choose a program</option>
+                            <option value="Hatha Yoga">Hatha Yoga</option>
+                            <option value="Pranayama">Pranayama</option>
+                            <option value="Meditation">Meditation</option>
+                            <option value="Advanced Asanas">Advanced Asanas</option>
+                            <option value="Personal Yoga Classes">Personal Yoga Classes</option>
+                            <option value="Beginner Yoga">Beginner Yoga</option>
+                            <option value="Flexibility & Strength">Flexibility &amp; Strength</option>
+                            <option value="Morning Yoga">Morning Yoga</option>
+                            <option value="Relaxation & Wellness">Relaxation &amp; Wellness</option>
+                            <option value="Breathing Practices">Breathing Practices</option>
+                            <option value="Mobility & Balance">Mobility &amp; Balance</option>
+                            <option value="General Enquiry">General Enquiry</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Tell us what you would like to know..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary form-submit">
+                        Continue to WhatsApp →
+                    </button>
+
+                    <p class="form-note">
+                        Your message will open in WhatsApp for you to review
+                        and send. This form does not send anything automatically.
+                    </p>
+
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ONLINE CLASSES -->
+    <section class="section online-note reveal">
+        <div class="container">
+
+            <p class="eyebrow">PRACTICE FROM ANYWHERE</p>
+
+            <h2>
+                Your Space.
+                <span>Your Practice.</span>
+            </h2>
+
+            <p>
+                Yogprakash Yogshala offers live online yoga sessions.
+                Contact us to discuss available classes and suitable timings.
+            </p>
+
+            <a href="https://wa.me/919892064706?text=Hello%20Yogprakash%20Yogshala%2C%20please%20share%20information%20about%20your%20live%20online%20yoga%20classes."
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn btn-outline">
+                Enquire About Online Classes
+            </a>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.jpeg" alt="Yogprakash Yogshala Logo">
+                    <span>
+                        <strong>YOGPRAKASH YOGSHALA</strong>
+                        <small>YOGA &amp; WELLNESS</small>
+                    </span>
+                </a>
+
+                <p>
+                    Traditional yoga, mindful living and personal growth
+                    through guided online practice.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="programs.html">Programs</a>
+                <a href="schedule.html">Schedule</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Connect</h4>
+                <p>Phone: +91 98920 64706</p>
+                <p>Email: yogprakash29@gmail.com</p>
+                <a href="https://wa.me/919892064706"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Chat on WhatsApp →
+                </a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Yogprakash Yogshala. All Rights Reserved.</p>
+        </div>
+
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+    // Preselect the program requested from the Programs page.
+    const programSelect = document.getElementById("program");
+    const requestedProgram =
+        new URLSearchParams(window.location.search).get("program");
+
+    if (requestedProgram && programSelect) {
+        const matchingOption = Array.from(programSelect.options)
+            .find(option => option.value === requestedProgram);
+
+        if (matchingOption) {
+            programSelect.value = requestedProgram;
+        }
+    }
+
+    // Prepare the enquiry message for WhatsApp.
+    document.getElementById("enquiryForm").addEventListener(
+        "submit",
+        function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById("fullName").value.trim();
+            const email = document.getElementById("emailAddress").value.trim();
+            const program = programSelect.value;
+            const message = document.getElementById("message").value.trim();
+
+            const whatsappMessage =
+                "Hello Yogprakash Yogshala!\n\n" +
+                "My Name: " + name + "\n" +
+                "My Email: " + email + "\n" +
+                "Program of Interest: " + program + "\n" +
+                "My Enquiry: " + message;
+
+            const whatsappURL =
+                "https://wa.me/919892064706?text=" +
+                encodeURIComponent(whatsappMessage);
+
+            window.open(whatsappURL, "_blank");
+        }
+    );
+</script>
+
+</body>
+</html>

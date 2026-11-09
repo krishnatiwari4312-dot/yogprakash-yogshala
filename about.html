@@ -1,0 +1,1575 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Story | Yogprakash Yogshala</title>
+    <meta name="description" content="Discover the journey, philosophy and yoga teaching experience of Master Omprakash Tiwari at Yogprakash Yogshala.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* YOGPRAKASH YOGSHALA — ABOUT PAGE */
+
+        :root {
+            --about-bg: #071426;
+            --about-bg-light: #0c2038;
+            --about-panel: #102640;
+            --about-gold: #d8b574;
+            --about-gold-light: #f0d7a1;
+            --about-white: #f5f2eb;
+            --about-muted: #aab7c8;
+            --about-line: rgba(216, 181, 116, 0.23);
+            --about-serif: "Cormorant Garamond", Georgia, serif;
+            --about-sans: "DM Sans", Arial, sans-serif;
+        }
+
+        .about-page,
+        .about-page * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--about-bg);
+            color: var(--about-white);
+            font-family: var(--about-sans);
+        }
+
+        body:has(.about-page) {
+            background: var(--about-bg);
+        }
+
+        .about-page {
+            overflow: hidden;
+            background:
+                radial-gradient(ellipse at 90% 5%, rgba(34, 65, 101, .24), transparent 32%),
+                var(--about-bg);
+        }
+
+        .about-page a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .about-page img {
+            display: block;
+            max-width: 100%;
+        }
+
+        .about-container {
+            width: min(1180px, 88%);
+            margin-inline: auto;
+        }
+
+        .about-eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--about-gold);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            line-height: 1.8;
+            text-transform: uppercase;
+        }
+
+        .about-eyebrow::before {
+            content: "";
+            width: 30px;
+            height: 1px;
+            background: var(--about-gold);
+        }
+
+        .about-section-heading {
+            max-width: 760px;
+            margin: 22px 0;
+            font-family: var(--about-serif);
+            font-size: clamp(42px, 5.5vw, 70px);
+            font-weight: 500;
+            line-height: .99;
+            letter-spacing: -1.5px;
+        }
+
+        .about-section-heading em {
+            color: var(--about-gold);
+            font-weight: 400;
+        }
+
+        .about-body-copy {
+            color: var(--about-muted);
+            font-size: 14px;
+            line-height: 1.95;
+        }
+
+        .about-gold-button {
+            display: inline-flex;
+            min-height: 52px;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            padding: 0 24px;
+            background: var(--about-gold);
+            color: #101b2b !important;
+            border: 1px solid var(--about-gold);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: .25s ease;
+        }
+
+        .about-gold-button:hover {
+            background: var(--about-gold-light);
+            border-color: var(--about-gold-light);
+            transform: translateY(-3px);
+        }
+
+        .about-outline-button {
+            display: inline-flex;
+            min-height: 52px;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 0 22px;
+            border: 1px solid rgba(245, 242, 235, .3);
+            color: var(--about-white) !important;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: .25s ease;
+        }
+
+        .about-outline-button:hover {
+            border-color: var(--about-gold);
+            color: var(--about-gold) !important;
+        }
+
+        /* NAVIGATION */
+
+        .about-nav {
+            position: relative;
+            z-index: 5;
+            border-bottom: 1px solid rgba(255, 255, 255, .09);
+            background: rgba(7, 20, 38, .95);
+        }
+
+        .about-nav-inner {
+            display: flex;
+            min-height: 88px;
+            align-items: center;
+            justify-content: space-between;
+            gap: 28px;
+        }
+
+        .about-brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
+        .about-brand img {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        .about-brand-name {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .about-brand-name strong {
+            color: var(--about-white);
+            font-size: 11px;
+            letter-spacing: 1.5px;
+        }
+
+        .about-brand-name span {
+            color: var(--about-gold);
+            font-size: 9px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+        }
+
+        .about-nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            gap: 27px;
+        }
+
+        .about-nav-links a {
+            color: #c4ceda;
+            font-size: 11px;
+            transition: color .2s ease;
+        }
+
+        .about-nav-links a:hover,
+        .about-nav-links a.active {
+            color: var(--about-gold);
+        }
+
+        .about-nav-links .about-nav-cta {
+            padding: 13px 17px;
+            border: 1px solid var(--about-gold);
+            color: var(--about-gold);
+            letter-spacing: .5px;
+        }
+
+        /* HERO */
+
+        .about-hero {
+            position: relative;
+            padding: 86px 0 100px;
+        }
+
+        .about-hero::before {
+            position: absolute;
+            top: 30px;
+            right: -100px;
+            width: 430px;
+            height: 430px;
+            border: 1px solid rgba(216, 181, 116, .09);
+            border-radius: 50%;
+            content: "";
+            pointer-events: none;
+        }
+
+        .about-hero::after {
+            position: absolute;
+            top: 75px;
+            right: -45px;
+            width: 320px;
+            height: 320px;
+            border: 1px solid rgba(216, 181, 116, .07);
+            border-radius: 50%;
+            content: "";
+            pointer-events: none;
+        }
+
+        .about-hero-grid {
+            display: grid;
+            grid-template-columns: 1.04fr .96fr;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .about-hero-copy {
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-hero h1 {
+            max-width: 650px;
+            margin: 28px 0;
+            font-family: var(--about-serif);
+            font-size: clamp(58px, 7.2vw, 94px);
+            font-weight: 500;
+            line-height: .89;
+            letter-spacing: -2px;
+        }
+
+        .about-hero h1 span {
+            display: block;
+            color: var(--about-gold);
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .about-hero-description {
+            max-width: 440px;
+            margin: 0 0 30px;
+            color: var(--about-muted);
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        .about-hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .about-hero-note {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 38px;
+            color: #c2ccda;
+            font-size: 11px;
+            line-height: 1.7;
+        }
+
+        .about-hero-note-mark {
+            display: grid;
+            width: 35px;
+            height: 35px;
+            place-items: center;
+            border: 1px solid var(--about-line);
+            color: var(--about-gold);
+            font-family: var(--about-serif);
+            font-size: 21px;
+        }
+
+        .about-hero-visual {
+            position: relative;
+            max-width: 460px;
+            margin-left: auto;
+            padding: 0 22px 22px 0;
+        }
+
+        .about-portrait-frame {
+            position: relative;
+            height: 520px;
+            overflow: hidden;
+            border: 1px solid rgba(216, 181, 116, .45);
+            background: var(--about-panel);
+        }
+
+        .about-portrait-frame::after {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                180deg,
+                transparent 55%,
+                rgba(5, 17, 32, .76) 100%
+            );
+            content: "";
+            pointer-events: none;
+        }
+
+        .about-portrait-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 28%;
+            transition: transform .7s ease;
+        }
+
+        .about-hero-visual:hover .about-portrait-frame img {
+            transform: scale(1.035);
+        }
+
+        .about-portrait-frame .about-image-caption {
+            position: absolute;
+            z-index: 1;
+            right: 25px;
+            bottom: 25px;
+            left: 25px;
+        }
+
+        .about-image-caption span {
+            display: block;
+            margin-bottom: 7px;
+            color: var(--about-gold-light);
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+        }
+
+        .about-image-caption strong {
+            font-family: var(--about-serif);
+            font-size: 32px;
+            font-weight: 500;
+        }
+
+        .about-photo-corner {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 110px;
+            height: 110px;
+            border-right: 2px solid var(--about-gold);
+            border-bottom: 2px solid var(--about-gold);
+            pointer-events: none;
+        }
+
+        .about-photo-number {
+            position: absolute;
+            top: 35px;
+            left: -25px;
+            display: grid;
+            width: 74px;
+            height: 74px;
+            place-items: center;
+            border: 1px solid var(--about-gold);
+            border-radius: 50%;
+            background: var(--about-bg);
+            color: var(--about-gold);
+            font-family: var(--about-serif);
+            font-size: 25px;
+        }
+
+        /* EXPERIENCE STRIP */
+
+        .about-proof-strip {
+            border-top: 1px solid var(--about-line);
+            border-bottom: 1px solid var(--about-line);
+            background: rgba(255, 255, 255, .018);
+        }
+
+        .about-proof-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .about-proof-item {
+            position: relative;
+            padding: 32px 20px;
+            text-align: center;
+        }
+
+        .about-proof-item + .about-proof-item {
+            border-left: 1px solid var(--about-line);
+        }
+
+        .about-proof-number {
+            display: block;
+            color: var(--about-gold);
+            font-family: var(--about-serif);
+            font-size: 42px;
+            line-height: 1.1;
+        }
+
+        .about-proof-label {
+            display: block;
+            margin-top: 8px;
+            color: var(--about-muted);
+            font-size: 9px;
+            font-weight: 600;
+            letter-spacing: 1.7px;
+            line-height: 1.7;
+            text-transform: uppercase;
+        }
+
+        /* STORY */
+
+        .about-story {
+            padding: 125px 0;
+        }
+
+        .about-story-grid {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            gap: 100px;
+        }
+
+        .about-story-aside {
+            position: relative;
+            padding-top: 10px;
+        }
+
+        .about-story-aside::after {
+            display: block;
+            width: 75px;
+            height: 1px;
+            margin-top: 30px;
+            background: var(--about-gold);
+            content: "";
+        }
+
+        .about-story-aside p {
+            max-width: 270px;
+            margin-top: 25px;
+            color: var(--about-muted);
+            font-family: var(--about-serif);
+            font-size: 27px;
+            font-style: italic;
+            line-height: 1.35;
+        }
+
+        .about-story-main h2 {
+            margin: 0 0 27px;
+            font-family: var(--about-serif);
+            font-size: clamp(42px, 5vw, 64px);
+            font-weight: 500;
+            line-height: 1;
+        }
+
+        .about-story-main h2 em {
+            color: var(--about-gold);
+            font-weight: 400;
+        }
+
+        .about-story-main p {
+            margin: 0 0 20px;
+            color: var(--about-muted);
+            font-size: 14px;
+            line-height: 2.05;
+        }
+
+        .about-story-main p strong {
+            color: var(--about-white);
+            font-weight: 600;
+        }
+
+        .about-story-signature {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-top: 34px;
+        }
+
+        .about-signature-line {
+            width: 48px;
+            height: 1px;
+            background: var(--about-gold);
+        }
+
+        .about-story-signature span {
+            color: var(--about-gold);
+            font-family: var(--about-serif);
+            font-size: 25px;
+            font-style: italic;
+        }
+
+        /* PHILOSOPHY */
+
+        .about-philosophy {
+            position: relative;
+            padding: 100px 0;
+            border-top: 1px solid rgba(255,255,255,.06);
+            border-bottom: 1px solid rgba(255,255,255,.06);
+            background:
+                radial-gradient(ellipse at 50% 50%, rgba(31, 62, 96, .58), transparent 70%),
+                #0a1b30;
+        }
+
+        .about-philosophy-inner {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-quote-symbol {
+            color: var(--about-gold);
+            font-family: var(--about-serif);
+            font-size: 100px;
+            line-height: .7;
+        }
+
+        .about-philosophy h2 {
+            margin: 24px 0;
+            font-family: var(--about-serif);
+            font-size: clamp(39px, 5.6vw, 68px);
+            font-weight: 400;
+            line-height: 1.08;
+        }
+
+        .about-philosophy h2 em {
+            color: var(--about-gold);
+            font-weight: 400;
+        }
+
+        .about-philosophy p {
+            max-width: 630px;
+            margin: 0 auto;
+            color: var(--about-muted);
+            font-size: 13px;
+            line-height: 2;
+        }
+
+        .about-philosophy-caption {
+            display: block;
+            margin-top: 32px;
+            color: var(--about-gold);
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        /* TEACHING APPROACH */
+
+        .about-approach {
+            padding: 125px 0;
+        }
+
+        .about-approach-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .about-approach-header .about-section-heading {
+            margin-bottom: 0;
+        }
+
+        .about-approach-intro {
+            max-width: 310px;
+            margin-bottom: 5px;
+        }
+
+        .about-approach-list {
+            border-top: 1px solid var(--about-line);
+        }
+
+        .about-approach-row {
+            display: grid;
+            grid-template-columns: 75px 1fr 1.1fr 30px;
+            align-items: center;
+            gap: 25px;
+            padding: 27px 0;
+            border-bottom: 1px solid var(--about-line);
+            transition: padding .25s ease, background .25s ease;
+        }
+
+        .about-approach-row:hover {
+            padding-right: 15px;
+            padding-left: 15px;
+            background: rgba(255,255,255,.025);
+        }
+
+        .about-approach-index {
+            color: var(--about-gold);
+            font-family: var(--about-serif);
+            font-size: 27px;
+        }
+
+        .about-approach-title {
+            font-family: var(--about-serif);
+            font-size: 31px;
+            font-weight: 500;
+        }
+
+        .about-approach-description {
+            color: var(--about-muted);
+            font-size: 12px;
+            line-height: 1.9;
+        }
+
+        .about-approach-arrow {
+            color: var(--about-gold);
+            font-size: 22px;
+            text-align: right;
+        }
+
+        /* QUALIFICATIONS AND RECOGNITION */
+
+        .about-credentials {
+            padding: 95px 0;
+            background: #0a1b30;
+            border-top: 1px solid rgba(255,255,255,.06);
+        }
+
+        .about-credentials-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .about-credential {
+            position: relative;
+            display: flex;
+            min-height: 250px;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 34px;
+            border: 1px solid var(--about-line);
+            background: linear-gradient(140deg, rgba(255,255,255,.035), transparent);
+            color: var(--about-white);
+            text-decoration: none;
+            cursor: pointer;
+            overflow: hidden;
+            transition:
+                transform .35s ease,
+                border-color .35s ease,
+                background .35s ease,
+                box-shadow .35s ease;
+            animation: credentialFadeIn .8s ease both;
+        }
+
+        .about-credential:nth-child(2) {
+            animation-delay: .15s;
+        }
+
+        .about-credential::after {
+            position: absolute;
+            right: -45px;
+            bottom: -65px;
+            width: 150px;
+            height: 150px;
+            border: 1px solid rgba(216, 181, 116, .12);
+            border-radius: 50%;
+            content: "";
+            pointer-events: none;
+            transition: transform .45s ease;
+        }
+
+        .about-credential:hover {
+            transform: translateY(-7px);
+            border-color: rgba(216, 181, 116, .7);
+            background: linear-gradient(140deg, rgba(216,181,116,.09), rgba(255,255,255,.015));
+            box-shadow: 0 18px 40px rgba(0,0,0,.18);
+        }
+
+        .about-credential:hover::after {
+            transform: scale(1.25);
+        }
+
+        .about-credential:focus-visible {
+            outline: 2px solid var(--about-gold);
+            outline-offset: 4px;
+        }
+
+        .about-credential-mark {
+            display: grid;
+            width: 45px;
+            height: 45px;
+            place-items: center;
+            border: 1px solid var(--about-line);
+            color: var(--about-gold);
+            font-family: var(--about-serif);
+            font-size: 25px;
+            transition: transform .35s ease, background .35s ease;
+        }
+
+        .about-credential:hover .about-credential-mark {
+            transform: rotate(8deg);
+            background: rgba(216,181,116,.08);
+        }
+
+        .about-credential h3 {
+            margin: 27px 0 9px;
+            font-family: var(--about-serif);
+            font-size: 31px;
+            font-weight: 500;
+        }
+
+        .about-credential p {
+            max-width: 410px;
+            margin: 0;
+            color: var(--about-muted);
+            font-size: 12px;
+            line-height: 1.9;
+        }
+
+        .about-credential-label {
+            display: block;
+            margin-top: 24px;
+            color: var(--about-gold);
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 1.7px;
+            text-transform: uppercase;
+            transition: letter-spacing .3s ease;
+        }
+
+        .about-credential:hover .about-credential-label {
+            letter-spacing: 2.2px;
+        }
+
+        @keyframes credentialFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(22px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* FINAL CTA */
+
+        .about-final-cta {
+            padding: 115px 0;
+            text-align: center;
+        }
+
+        .about-final-cta .about-eyebrow {
+            justify-content: center;
+        }
+
+        .about-final-cta .about-eyebrow::before {
+            display: none;
+        }
+
+        .about-final-cta h2 {
+            max-width: 850px;
+            margin: 25px auto;
+            font-family: var(--about-serif);
+            font-size: clamp(48px, 7vw, 84px);
+            font-weight: 400;
+            line-height: .98;
+        }
+
+        .about-final-cta h2 em {
+            color: var(--about-gold);
+            font-weight: 400;
+        }
+
+        .about-final-cta p {
+            max-width: 490px;
+            margin: 0 auto 32px;
+            color: var(--about-muted);
+            font-size: 13px;
+            line-height: 1.9;
+        }
+
+        .about-final-cta-actions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        /* FOOTER */
+
+        .about-footer {
+            padding: 35px 0;
+            border-top: 1px solid var(--about-line);
+            background: #050f1d;
+        }
+
+        .about-footer-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 22px;
+        }
+
+        .about-footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+        }
+
+        .about-footer-brand img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            object-fit: contain;
+        }
+
+        .about-footer-brand span {
+            color: var(--about-white);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+        }
+
+        .about-footer-copy {
+            color: #7e8da1;
+            font-size: 10px;
+            line-height: 1.8;
+        }
+
+        .about-footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .about-footer-links a {
+            color: #b8c3d1;
+            font-size: 10px;
+        }
+
+        .about-footer-links a:hover {
+            color: var(--about-gold);
+        }
+
+        .about-whatsapp-float {
+            position: fixed;
+            z-index: 10;
+            right: 23px;
+            bottom: 22px;
+            display: grid;
+            width: 54px;
+            height: 54px;
+            place-items: center;
+            border: 1px solid rgba(255,255,255,.25);
+            border-radius: 50%;
+            background: #1c8b61;
+            color: white !important;
+            box-shadow: 0 8px 28px rgba(0,0,0,.25);
+            font-size: 12px;
+            font-weight: 700;
+            transition: transform .2s ease;
+        }
+
+        .about-whatsapp-float:hover {
+            transform: translateY(-4px);
+        }
+
+        /* RESPONSIVE DESIGN */
+
+        @media (max-width: 900px) {
+            .about-nav-inner {
+                padding: 17px 0;
+                align-items: flex-start;
+            }
+
+            .about-nav-links {
+                gap: 15px;
+            }
+
+            .about-hero {
+                padding: 65px 0 80px;
+            }
+
+            .about-hero-grid {
+                gap: 38px;
+            }
+
+            .about-portrait-frame {
+                height: 440px;
+            }
+
+            .about-story-grid {
+                gap: 50px;
+            }
+
+            .about-approach-row {
+                grid-template-columns: 45px 1fr 1fr 20px;
+                gap: 16px;
+            }
+
+            .about-approach-title {
+                font-size: 26px;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .about-container {
+                width: 89%;
+            }
+
+            .about-nav-inner {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .about-brand img {
+                width: 42px;
+                height: 42px;
+            }
+
+            .about-nav-links {
+                width: 100%;
+                justify-content: flex-start;
+                gap: 17px;
+            }
+
+            .about-nav-links a {
+                font-size: 10px;
+            }
+
+            .about-nav-links .about-nav-cta {
+                padding: 10px 12px;
+            }
+
+            .about-hero {
+                padding: 58px 0 70px;
+            }
+
+            .about-hero-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .about-hero h1 {
+                font-size: clamp(60px, 16vw, 82px);
+            }
+
+            .about-hero-description {
+                font-size: 13px;
+            }
+
+            .about-hero-visual {
+                width: 88%;
+                margin: 0 auto;
+            }
+
+            .about-portrait-frame {
+                height: 430px;
+            }
+
+            .about-photo-number {
+                left: -22px;
+                width: 62px;
+                height: 62px;
+                font-size: 21px;
+            }
+
+            .about-proof-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about-proof-item {
+                padding: 24px 12px;
+            }
+
+            .about-proof-item:nth-child(3) {
+                border-left: 0;
+                border-top: 1px solid var(--about-line);
+            }
+
+            .about-proof-item:nth-child(4) {
+                border-top: 1px solid var(--about-line);
+            }
+
+            .about-proof-number {
+                font-size: 36px;
+            }
+
+            .about-proof-label {
+                font-size: 8px;
+                letter-spacing: 1.2px;
+            }
+
+            .about-story {
+                padding: 82px 0;
+            }
+
+            .about-story-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .about-story-aside p {
+                max-width: 320px;
+                font-size: 25px;
+            }
+
+            .about-story-main h2 {
+                font-size: 48px;
+            }
+
+            .about-philosophy {
+                padding: 75px 0;
+            }
+
+            .about-quote-symbol {
+                font-size: 78px;
+            }
+
+            .about-philosophy h2 {
+                font-size: 46px;
+            }
+
+            .about-approach {
+                padding: 85px 0;
+            }
+
+            .about-approach-header {
+                display: block;
+                margin-bottom: 38px;
+            }
+
+            .about-approach-intro {
+                margin-top: 22px;
+            }
+
+            .about-approach-row {
+                grid-template-columns: 35px 1fr 20px;
+                gap: 13px;
+                padding: 22px 0;
+            }
+
+            .about-approach-index {
+                font-size: 23px;
+            }
+
+            .about-approach-title {
+                font-size: 26px;
+            }
+
+            .about-approach-description {
+                grid-column: 2 / 3;
+                font-size: 11px;
+            }
+
+            .about-approach-arrow {
+                grid-column: 3;
+                grid-row: 1;
+            }
+
+            .about-credentials {
+                padding: 75px 0;
+            }
+
+            .about-credentials-grid {
+                grid-template-columns: 1fr;
+                margin-top: 32px;
+            }
+
+            .about-credential {
+                min-height: 215px;
+                padding: 26px;
+            }
+
+            .about-final-cta {
+                padding: 82px 0;
+            }
+
+            .about-final-cta h2 {
+                font-size: 57px;
+            }
+
+            .about-footer-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .about-whatsapp-float {
+                right: 15px;
+                bottom: 15px;
+                width: 49px;
+                height: 49px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            .about-page *,
+            .about-page *::before,
+            .about-page *::after {
+                transition-duration: .01ms !important;
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="about-page">
+
+    <!-- NAVIGATION -->
+    <header class="about-nav">
+        <div class="about-container about-nav-inner">
+
+            <a href="index.html" class="about-brand">
+                <img src="assets/logo.jpeg" alt="Yogprakash Yogshala logo">
+                <span class="about-brand-name">
+                    <strong>YOGPRAKASH</strong>
+                    <span>Yogshala</span>
+                </span>
+            </a>
+
+            <nav class="about-nav-links" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">Our Story</a>
+                <a href="programs.html">Programs</a>
+                <a href="schedule.html">Schedule</a>
+                <a href="contact.html">Contact</a>
+                <a href="https://wa.me/919892064706" class="about-nav-cta">Join a Class ↗</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="about-hero">
+            <div class="about-container about-hero-grid">
+
+                <div class="about-hero-copy">
+                    <div class="about-eyebrow">The person behind the practice</div>
+
+                    <h1>
+                        More than
+                        <span>just yoga.</span>
+                    </h1>
+
+                    <p class="about-hero-description">
+                        Meet Master Omprakash Tiwari — a yoga teacher whose
+                        journey reflects years of learning, teaching and
+                        dedication to the practice of yoga.
+                    </p>
+
+                    <div class="about-hero-buttons">
+                        <a href="#our-story" class="about-gold-button">
+                            Discover His Journey <span>↓</span>
+                        </a>
+
+                        <a href="programs.html" class="about-outline-button">
+                            Explore Programs ↗
+                        </a>
+                    </div>
+
+                    <div class="about-hero-note">
+                        <span class="about-hero-note-mark">ॐ</span>
+                        <span>
+                            Rooted in tradition.<br>
+                            Guided by experience.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="about-hero-visual">
+                    <div class="about-portrait-frame">
+                        <img
+                            src="assets/papa-yoga.jpeg"
+                            alt="Master Omprakash Tiwari, yoga teacher"
+                        >
+
+                        <div class="about-image-caption">
+                            <span>Yoga Teacher & Guide</span>
+                            <strong>Master Omprakash Tiwari</strong>
+                        </div>
+                    </div>
+
+                    <div class="about-photo-number">ॐ</div>
+                    <div class="about-photo-corner"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- EXPERIENCE STRIP -->
+        <section class="about-proof-strip" aria-label="Experience and qualifications">
+            <div class="about-container about-proof-grid">
+
+                <div class="about-proof-item">
+                    <span class="about-proof-number">26</span>
+                    <span class="about-proof-label">Years of Teaching Experience</span>
+                </div>
+
+                <div class="about-proof-item">
+                    <span class="about-proof-number">M.A.</span>
+                    <span class="about-proof-label">Qualification in Yoga</span>
+                </div>
+
+                <div class="about-proof-item">
+                    <span class="about-proof-number">Live</span>
+                    <span class="about-proof-label">Online Yoga Classes</span>
+                </div>
+
+                <div class="about-proof-item">
+                    <span class="about-proof-number">11</span>
+                    <span class="about-proof-label">Listed Practice Options</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PERSONAL STORY -->
+        <section class="about-story" id="our-story">
+            <div class="about-container about-story-grid">
+
+                <aside class="about-story-aside">
+                    <div class="about-eyebrow">A journey of dedication</div>
+
+                    <p>
+                        "The practice of yoga is a journey of learning,
+                        patience and self-discovery."
+                    </p>
+                </aside>
+
+                <div class="about-story-main">
+                    <h2>
+                        Years of practice.<br>
+                        A <em>lifelong pursuit.</em>
+                    </h2>
+
+                    <p>
+                        For Master Omprakash Tiwari, yoga is more than a
+                        collection of physical postures. It is a discipline
+                        that brings together movement, breathing, awareness
+                        and consistency.
+                    </p>
+
+                    <p>
+                        With <strong>26 years of teaching experience</strong>
+                        and a <strong>Master in Yoga</strong>, his
+                        journey reflects a long-standing commitment to
+                        learning and sharing the practice of yoga.
+                    </p>
+
+                    <p>
+                        At Yogprakash Yogshala, this experience is brought
+                        into live online classes, giving students an
+                        opportunity to practise from their own space and
+                        build a routine around their individual needs.
+                    </p>
+
+                    <p>
+                        The aim is to make yoga a meaningful part of everyday
+                        life — approached with attention, patience and respect
+                        for the practice.
+                    </p>
+
+                    <div class="about-story-signature">
+                        <span class="about-signature-line"></span>
+                        <span>Practice with purpose.</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PHILOSOPHY -->
+        <section class="about-philosophy">
+            <div class="about-container about-philosophy-inner">
+
+                <div class="about-quote-symbol">“</div>
+
+                <div class="about-eyebrow" style="justify-content:center;">
+                    The philosophy
+                </div>
+
+                <h2>
+                    Yoga is not only about<br>
+                    how you <em>move.</em>
+                </h2>
+
+                <p>
+                    It is also about how you breathe, how you pay attention
+                    and how consistently you show up for your practice.
+                    At Yogprakash Yogshala, the focus is on approaching yoga
+                    as a continuing journey rather than a quick destination.
+                </p>
+
+                <span class="about-philosophy-caption">
+                    Awareness · Patience · Consistency
+                </span>
+
+            </div>
+        </section>
+
+        <!-- TEACHING APPROACH -->
+        <section class="about-approach">
+            <div class="about-container">
+
+                <div class="about-approach-header">
+                    <div>
+                        <div class="about-eyebrow">The teaching approach</div>
+
+                        <h2 class="about-section-heading">
+                            Different practices.<br>
+                            <em>One mindful journey.</em>
+                        </h2>
+                    </div>
+
+                    <p class="about-body-copy about-approach-intro">
+                        Explore the key areas of practice available through
+                        Yogprakash Yogshala, from movement and breathing
+                        to meditation and personal sessions.
+                    </p>
+                </div>
+
+                <div class="about-approach-list">
+
+                    <a href="programs.html" class="about-approach-row">
+                        <span class="about-approach-index">01</span>
+                        <span class="about-approach-title">Hatha Yoga</span>
+                        <span class="about-approach-description">
+                            A practice centred on yoga postures, movement
+                            and mindful attention.
+                        </span>
+                        <span class="about-approach-arrow">↗</span>
+                    </a>
+
+                    <a href="programs.html" class="about-approach-row">
+                        <span class="about-approach-index">02</span>
+                        <span class="about-approach-title">Pranayama</span>
+                        <span class="about-approach-description">
+                            Breathing practices approached with focus,
+                            awareness and control.
+                        </span>
+                        <span class="about-approach-arrow">↗</span>
+                    </a>
+
+                    <a href="programs.html" class="about-approach-row">
+                        <span class="about-approach-index">03</span>
+                        <span class="about-approach-title">Meditation</span>
+                        <span class="about-approach-description">
+                            Time dedicated to stillness, attention
+                            and a more mindful routine.
+                        </span>
+                        <span class="about-approach-arrow">↗</span>
+                    </a>
+
+                    <a href="programs.html" class="about-approach-row">
+                        <span class="about-approach-index">04</span>
+                        <span class="about-approach-title">Advanced Asanas</span>
+                        <span class="about-approach-description">
+                            A focused area of posture practice for students
+                            working on their ongoing yoga journey.
+                        </span>
+                        <span class="about-approach-arrow">↗</span>
+                    </a>
+
+                </div>
+
+                <div style="margin-top:32px;">
+                    <a href="programs.html" class="about-outline-button">
+                        View All Programs ↗
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- QUALIFICATIONS & RECOGNITION -->
+        <section class="about-credentials">
+            <div class="about-container">
+
+                <div class="about-eyebrow">The journey in recognition</div>
+
+                <h2 class="about-section-heading">
+                    Knowledge, experience<br>
+                    and <em>recognition.</em>
+                </h2>
+
+                <p class="about-body-copy" style="max-width:650px;">
+                    A teacher's journey includes years of practice and learning.
+                    Explore the academic qualification and recognitions
+                    of Master Omprakash Tiwari.
+                </p>
+
+                <div class="about-credentials-grid">
+
+                    <!-- CLICKABLE QUALIFICATION CARD -->
+                    <a href="qualifications.html" class="about-credential">
+                        <div>
+                            <div class="about-credential-mark">✦</div>
+
+                            <h3>Academic Qualification</h3>
+
+                            <p>
+                                Master of Arts in Yoga and Science of Living,
+                                awarded by Jain Vishva Bharati Institute,
+                                Ladnun, Rajasthan, in 2024.
+                            </p>
+                        </div>
+
+                        <span class="about-credential-label">
+                            Explore Qualification ↗
+                        </span>
+                    </a>
+
+                    <!-- CLICKABLE AWARDS & RECOGNITION CARD -->
+                    <a href="achievements.html" class="about-credential">
+                        <div>
+                            <div class="about-credential-mark">✧</div>
+
+                            <h3>Awards & Recognition</h3>
+
+                            <p>
+                                Discover the awards, achievements and
+                                recognitions from Master Omprakash Tiwari's
+                                journey in yoga.
+                            </p>
+                        </div>
+
+                        <span class="about-credential-label">
+                            Explore Recognition ↗
+                        </span>
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="about-final-cta">
+            <div class="about-container">
+
+                <div class="about-eyebrow">
+                    Your practice can begin here
+                </div>
+
+                <h2>
+                    Make space for<br>
+                    <em>yourself.</em>
+                </h2>
+
+                <p>
+                    Explore the available online yoga programs or get in touch
+                    to discuss which class may suit your interests and schedule.
+                </p>
+
+                <div class="about-final-cta-actions">
+                    <a href="programs.html" class="about-gold-button">
+                        Explore Programs ↗
+                    </a>
+
+                    <a
+                        href="https://wa.me/919892064706?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Yogprakash%20Yogshala."
+                        class="about-outline-button"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Connect on WhatsApp ↗
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="about-footer">
+        <div class="about-container about-footer-inner">
+
+            <a href="index.html" class="about-footer-brand">
+                <img src="assets/logo.jpeg" alt="">
+                <span>YOGPRAKASH YOGSHALA</span>
+            </a>
+
+            <div class="about-footer-copy">
+                © <span id="about-current-year">2026</span>
+                Yogprakash Yogshala. All rights reserved.
+            </div>
+
+            <div class="about-footer-links">
+                <a href="index.html">Home</a>
+                <a href="programs.html">Programs</a>
+                <a href="schedule.html">Schedule</a>
+                <a href="contact.html">Contact</a>
+                <a href="mailto:yogprakash29@gmail.com">Email Us</a>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP -->
+    <a
+        href="https://wa.me/919892064706"
+        class="about-whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Contact Yogprakash Yogshala on WhatsApp"
+        title="Chat on WhatsApp"
+    >
+        WA
+    </a>
+
+</div>
+
+<script>
+    document.getElementById("about-current-year").textContent =
+        new Date().getFullYear();
+</script>
+
+</body>
+</html>
